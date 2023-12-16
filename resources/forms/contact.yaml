@@ -1,0 +1,19 @@
+title: Contact
+honeypot: fax
+email:
+  -
+    id: 7kM5ogpj
+    to: sales@fluxia.com
+    from: sales@fluxia.com
+    reply_to: '{{ email }}'
+    subject: '{{ trans:strings.form_subject_received }}'
+    html: email/form_owner
+    text: email/form_owner_text
+  -
+    id: eyv8GKdU
+    to: '{{ email }}'
+    from: sales@fluxia.com
+    reply_to: sales@fluxia.com
+    subject: '{{ trans:strings.form_subject_sent }}'
+    html: email/form_sender
+    text: email/form_sender_text

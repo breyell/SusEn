@@ -1,0 +1,49 @@
+<!-- /page_builder/_home_hero.antlers.html -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"
+    integrity="sha512-vONptKEoKbP1gaC5UkbYDa9OPr04ur4bxaaqT7DAJxGHB2oogtseCPrl5e5hPFokGYotlGNV4d+GM593ka7iNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.css"
+    integrity="sha512-uPqDOam5vjVgnASE75fCgMtdLa3oK2+3muDU5ESulSImHAA0Z0xjEnuJpKowTsXUWY09MsYre48zgBFwh2P/yw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section
+    class="relative w-full h-[50rem] lg:h-auto lg:aspect-video home-hero"
+    {{ if video }}
+        x-data="{ player: undefined, played: false }"
+        x-init="player = new Plyr($refs.video, { autoplay: true, muted: true, loop: { active: true }, controls: [] })"
+    {{ /if }}
+>
+    {{ if video }}
+        <div class="" x-ref="video">
+            {{ if video | is_embeddable }}
+                <!-- Youtube and Vimeo -->
+                <iframe src="{{ video | embed_url }}" class=""></iframe>
+            {{ else }}
+                <!-- Other HTML5 video types -->
+                <video src="{{ video | embed_url }}" w-full aspect-video></video>
+            {{ /if }}
+        </div>
+    {{ /if }}
+    <div class="fluid-container absolute z-10 top-0 left-0 flex flex-col justify-center w-full h-full">
+        <div class="grid-default">
+            <h1 class="text-h1 text-white col-span-2 sm:col-span-12 lg:col-span-9">{{ heading }}</h1>
+            <div class="mt-11 col-span-2 sm:col-span-12">
+                {{ links }}
+                    {{ partial:components/link button_type="white" }}
+                {{ /links }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.home-hero .plyr--video {
+    height: 100%;
+}
+
+.home-hero .plyr__video-wrapper.plyr__video-embed {
+    width: auto;
+}
+</style>
+
+<!-- End: /page_builder/_home_hero.antlers.html -->

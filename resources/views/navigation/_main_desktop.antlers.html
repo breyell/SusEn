@@ -1,0 +1,25 @@
+{{#
+    @name Main desktop navigation
+#}}
+
+<!-- /navigation/_main_desktop.antlers.html -->
+<nav class="hidden md:block" aria-label="{{ trans:strings.main_navigation }}">
+    <ul class="flex items-center space-x-8">
+        {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+            <li class="relative leading-none">
+                <a
+                    class="
+                        p-1 -m-1 flex items-center font-bold text-sm hover:text-primary focus:outline-none focus-visible:ring-2 ring-primary
+                        {{ is_current || is_parent
+                            ? 'text-primary'
+                            : 'text-neutral' }}
+                    "
+                    href="{{ url }}"
+                >
+                    {{ title }}
+                </a>
+            </li>
+        {{ /nav:main }}
+    </ul>
+</nav>
+<!-- End: /navigation/_main_desktop.antlers.html -->

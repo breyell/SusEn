@@ -1,0 +1,30 @@
+<section class="bg-blue-light py-16">
+    <div class="fluid-container grid-default gap-y-5">
+        <div class="col-span-2 sm:col-span-12 lg:col-span-5">
+            <h2 class="text-h1">{{ heading }}</h2>
+            <p class="text-body mt-7">{{ body }}</p>
+        </div>
+        <div class="col-span-2 sm:col-span-12 lg:col-span-6 lg:col-start-7">
+            <div class="lg:w-5/6 lg:ml-auto">
+                {{ partial src="statamic-peak-tools::components/picture"
+                    :image="large_image"
+                    aspect_ratio="1/1 large:17/20"
+                    cover="true"
+                    sizes=""
+                    lazy=""
+                    class="rounded-[1.25rem] lg:rounded-[2.44rem]"
+                }}
+            </div>
+            <div class="hidden lg:block w-1/2 lg:-mt-64 xl:-mt-96">
+                {{ partial src="statamic-peak-tools::components/picture"
+                    :image="small_image"
+                    aspect_ratio="3/4"
+                    cover="true"
+                    sizes=""
+                    lazy=""
+                    class="rounded-[1.25rem]"
+                }}
+            </div>
+        </div>
+    </div>
+</section>

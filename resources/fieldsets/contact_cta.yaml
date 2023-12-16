@@ -1,0 +1,56 @@
+title: 'Contact CTA'
+fields:
+  -
+    handle: heading_start
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Heading Start'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: heading_end
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Heading End'
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: links
+    field:
+      collapse: false
+      previews: true
+      max_sets: 1
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            link:
+              display: Link
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: link
+      type: replicator
+      display: Links
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

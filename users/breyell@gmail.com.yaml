@@ -1,0 +1,8 @@
+name: 'Brendon Reyell'
+super: true
+id: ff494186-c19d-4eec-ade5-edf9718c1f98
+password_hash: $2y$10$b/eavjCBBfsbIszTIQ.t3.HVunnOdXcPawKenLI6Igy6tAyVD3Yee
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing

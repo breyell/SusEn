@@ -1,0 +1,136 @@
+{{#
+    @name Desktop Header
+    @desc The sites desktop header rendered on each page.
+#}}
+
+<!-- /layout/_header_desktop.antlers.html -->
+<header
+    x-data="{ atTop: true, mobileMenuOpen: false }"
+    class=""
+>
+    <div
+        x-intersect:enter="atTop = true"
+        x-intersect:leave="atTop = false"
+        class="absolute top-0 left-0 h-px w-full"
+    ></div>
+    <div
+        :class="{
+            'text-white': atTop,
+            'bg-white/[0.85]': !atTop,
+        }"
+        class="fixed z-30 top-0 left-0 w-full py-6 rounded-b-[0.625rem] transition-all"
+    >
+        <div class="fluid-container flex justify-between">
+            <a href="/" class="inline-flex items-center">
+                {{ svg:logo class="h-[1.3125rem] lg:h-[1.875rem] fill-current" sanitize="true" }}
+            </a>
+            <div class="flex gap-x-7 items-center">
+                <nav class="hidden lg:block" aria-label="{{ trans:strings.main_navigation }}">
+                    <ul class="flex items-center space-x-8">
+                        {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+                            <li class="relative leading-none">
+                                <a class="
+                                        p-1 -m-1 flex items-center font-bold text-sm text-button focus:outline-none focus-visible:ring-2 ring-primary underline-offset-4 transition-all decoration-2
+                                        {{ is_current || is_parent
+                                            ? 'underline hover:decoration-4'
+                                            : 'hover:underline'
+                                        }}
+                                    "
+                                    href="{{ url }}"
+                                >{{ title }}</a>
+                            </li>
+                        {{ /nav:main }}
+                    </ul>
+                </nav>
+                <button
+                    @click="contactOpen = !contactOpen"
+                    :aria-expanded="contactOpen"
+                    aria-controls="contact"
+                    class="
+                        hidden lg:inline-block relative min-w-[12.25rem] py-3 rounded-[10px] text-center text-button
+                        after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+                    "
+                >Get in touch</button>
+                <button
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="block lg:hidden relative w-8 h-4 group text-white"
+                    :class="{
+                        'text-white': atTop,
+                        'text-black': !atTop,
+                    }"
+                    :aria-expanded="mobileMenuOpen"
+                    aria-controls="mobile-menu"
+                >
+                    <div class="absolute z-10 top-0 left-0 w-full h-[2px] bg-current transition-all duration-100"></div>
+                    <div class="absolute z-10 bottom-0 left-0 w-full h-[2px] bg-current transition-all duration-100"></div>
+                    <div class="sr-only" x-text="mobileMenuOpen ? 'Close Menu' : 'Open Menu'"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div
+        id="mobile-menu"
+        :class="{ '!translate-x-0' : mobileMenuOpen }"
+        class="fixed z-30 inset-0 w-full py-7 px-9 bg-black text-white overflow-y-auto transition-all translate-x-full"
+    >
+        <div class="flex items-center justify-between pb-6 border-b border-b-white">
+            {{ svg:logo class="h-[1.3125rem] lg:h-[1.875rem] fill-current" sanitize="true" }}
+            <button @click="mobileMenuOpen = false" class="relative w-8 h-8 text-white">
+                <div class="absolute z-10 top-0 left-0 w-full h-[2px] bg-current rotate-45 translate-y-[15px]"></div>
+                <div class="absolute z-10 bottom-0 left-0 w-full h-[2px] bg-current -rotate-45 -translate-y-[15px]"></div>
+                <div class="sr-only">Close Menu</div>
+            </button>
+        </div>
+        <p class="text-h1 mt-14 mb-11">Your future starts here</p>
+        <button
+            @click="contactOpen = !contactOpen"
+            :aria-expanded="contactOpen"
+            aria-controls="contact"
+            class="
+                inline-block relative min-w-[12.25rem] py-[14px] rounded-[10px] text-center text-button
+                after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+            "
+        >Get in touch</button>
+        <nav class="py-9 mt-16 border-b border-t border-white" aria-label="{{ trans:strings.main_navigation }}">
+            <ul class="flex items-center space-x-8">
+                {{ nav:main max_depth="2" include_home="true" select="title|url" }}
+                    <li class="relative leading-none w-full">
+                        <a class="
+                                flex flex-wrap gap-x-2 gap-y-4 justify-between items-center
+                                {{ is_current || is_parent
+                                    ? 'underline underline-offset-4 decoration-4'
+                                    : ''
+                                }}
+                            "
+                            href="{{ url }}"
+                        >
+                            <span class="inline text-h1">{{ title }}</span>
+                            <div class="
+                                relative inline-block w-12 h-12 p-3 lg:col-start-1 flex-shrink-0
+                                after:absolute after:top-0 after:left-0 after:w-full after:h-full after:border after:border-white after:rounded-[0.625rem] after:transition-[border-width] after:duration-75
+                                hover:after:border-2
+                            ">
+                                {{ svg:arrow class="text-white" aria-hidden="true" sanitize="true" }}
+                            </div>
+                        </a>
+                    </li>
+                {{ /nav:main }}
+            </ul>
+        </nav>
+    </div>
+    <div
+        id="contact"
+        :class="{ '!translate-x-0' : contactOpen }"
+        class="fixed lg:w-full lg:max-w-xl z-40 inset-0 w-full ml-auto py-7 px-9 bg-black text-white overflow-y-auto transition-all translate-x-full"
+    >
+        <button @click="contactOpen = false" class="relative block w-8 h-8 ml-auto text-white">
+            <div class="absolute z-10 top-0 left-0 w-full h-[2px] bg-current rotate-45 translate-y-[15px]"></div>
+            <div class="absolute z-10 bottom-0 left-0 w-full h-[2px] bg-current -rotate-45 -translate-y-[15px]"></div>
+            <div class="sr-only">Close Contact</div>
+        </button>
+        <h3 class="text-h3 mt-2">Get in touch</h3>
+        <p class="text-body mt-2.5">Fill out the form below to start the conversation with us, or shoot us an email.</p>
+        {{ partial:layout/header_form }}
+    </div>
+</header>
+<!-- End: /layout/_header_desktop.antlers.html -->

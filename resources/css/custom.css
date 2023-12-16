@@ -1,0 +1,86 @@
+/* If you don't want to use the JS in CSS syntax from `tailwind.config.site.js` you can add your own custom CSS here. Use different layers to make sure your CSS either get's purged or not: https://tailwindcss.com/docs/functions-and-directives#layer. CSS in the base layer won't get purged. */
+
+@layer base {
+    @font-face {
+        font-display: swap;
+        font-family: 'Slussen';
+        font-style: normal;
+        font-weight: 300;
+        src: url('/public/fonts/slussen/Slussen-Light.woff2') format('woff2'),
+             url('/public/fonts/slussen/Slussen-Light.woff') format('woff');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Slussen';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/public/fonts/slussen/Slussen-Regular.woff2') format('woff2'),
+             url('/public/fonts/slussen/Slussen-Regular.woff') format('woff');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Slussen';
+        font-style: italic;
+        font-weight: 400;
+        src: url('/public/fonts/slussen/Slussen-Regular-Italic.woff2') format('woff2'),
+             url('/public/fonts/slussen/Slussen-Regular-Italic.woff') format('woff');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Slussen';
+        font-style: normal;
+        font-weight: 500;
+        src: url('/public/fonts/slussen/Slussen-Medium.woff2') format('woff2'),
+             url('/public/fonts/slussen/Slussen-Medium.woff') format('woff');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Slussen Mono';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/public/fonts/slussen-mono/Slussen-Mono-Bold.woff2') format('woff2'),
+             url('/public/fonts/slussen-mono/Slussen-Mono-Bold.woff') format('woff');
+    }
+}
+
+@layer components {
+    .grid-default {
+        @apply grid grid-cols-2 sm:grid-cols-12 gap-x-8;
+    }
+
+    .text-number {
+        @apply font-slussen font-light text-[7.5rem] lg:text-[12.5rem] leading-none tracking-[-0.15rem] lg:tracking-[-0.25rem];
+    }
+
+    .text-h1 {
+        @apply font-slussen font-medium text-[3.125rem] leading-[1.1] tracking-[-0.0625rem] lg:text-[5.625rem] lg:leading-[5.9375rem] lg:tracking-[-0.1125rem];
+    }
+
+    .text-h2 {
+        @apply font-slussen font-medium text-[2.6875rem] leading-[3.34375rem] lg:text-[4.8125rem] lg:leading-[5.46875rem] lg:tracking-[-0.09625rem];
+    }
+
+    .text-h3 {
+        @apply font-slussen font-light text-[2.5rem] leading-[2.8125rem] lg:text-6xl lg:leading-[4.375rem];
+    }
+
+    .text-body {
+        @apply font-slussen font-normal text-xl;
+    }
+
+    .text-subtext {
+        @apply font-slussen-mono font-bold text-sm leading-[1.46875rem] tracking-[0.12688rem] uppercase;
+    }
+
+    .text-button {
+        @apply font-slussen-mono font-bold text-sm leading-none tracking-[0.12688rem] uppercase;
+    }
+}
+
+@layer utilities {
+
+}

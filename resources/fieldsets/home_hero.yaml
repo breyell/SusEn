@@ -1,0 +1,54 @@
+title: 'Home Hero'
+fields:
+  -
+    handle: heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: links
+    field:
+      collapse: false
+      previews: true
+      max_sets: 1
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            link:
+              display: Link
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: link
+      type: replicator
+      display: Links
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: video
+    field:
+      type: video
+      display: Video
+      icon: video
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

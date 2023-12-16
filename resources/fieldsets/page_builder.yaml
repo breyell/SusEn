@@ -1,0 +1,85 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      hide_display: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      sets:
+        components:
+          display: Components
+          instructions: null
+          icon: null
+          sets:
+            home_hero:
+              display: 'Home Hero'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: home_hero
+            intro:
+              display: Intro
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: intro
+            partners:
+              display: Partners
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: partners
+            services:
+              display: Services
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: services
+            company_hero:
+              display: 'Company Hero'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: company_hero
+            company_facts:
+              display: 'Company Facts'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: company_facts
+            team:
+              display: Team
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: team
+            credentials_lists:
+              display: 'Credentials Lists'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: credentials_lists
+            contact_cta:
+              display: 'Contact CTA'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: contact_cta
+      instructions_position: above
+      visibility: visible
+      previews: true
+      replicator_preview: true
+      fullscreen: true

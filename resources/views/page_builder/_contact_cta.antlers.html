@@ -1,0 +1,16 @@
+<section class="relative overflow-hidden lg:overflow-visible bg-green-off text-white pt-12 pb-[38rem] lg:pt-24 lg:pb-[32rem]">
+    <div class="absolute bottom-0 left-0 lg:left-auto lg:right-0 lg:bottom-auto lg:-top-40 w-[41rem] h-[41rem] lg:w-[58rem] lg:h-[58rem]">
+        {{ svg:circleish class="text-yellow opacity-40 w-full h-full" sanitize="true" }}
+    </div>
+    <div class="relative fluid-container">
+        <h2 class="text-h1 lg:text-h2">
+            <span class="">{{ heading_start }}</span>
+            <span class="text-yellow">{{ heading_end }}</span>.
+        </h2>
+        <div class="mt-8">
+            {{ links }}
+                {{ partial:components/link button_type="white" }}
+            {{ /links }}
+        </div>
+    </div>
+</section>

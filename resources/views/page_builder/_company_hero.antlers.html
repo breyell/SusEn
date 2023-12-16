@@ -1,0 +1,33 @@
+<section class="overflow-hidden relative bg-green-off text-white pt-32 pb-9 lg:pt-72">
+    <div class="absolute top-16 left-0 w-[39rem] h-[39rem] lg:top-36 lg:w-[60rem] lg:h-[60rem] lg:left-1/2">
+        {{ svg:circleish class="text-[#04605A] opacity-25 w-full h-full mix-blend-multiply" sanitize="true" }}
+    </div>
+    <div class="relative fluid-container grid-default">
+        <div class="col-span-2 sm:col-span-12 lg:col-span-6 lg:mt-9">
+            <h1 class="text-h1">
+                <span class="">{{ heading_start }}</span>
+                <span class="text-yellow">{{ heading_end }}</span>
+            </h1>
+            <p class="text-body mt-9 lg:w-5/6">{{ body }}</p>
+        </div>
+        <div class="hidden lg:block col-span-5 col-start-8">
+            {{ partial src="statamic-peak-tools::components/picture"
+                :image="large_image"
+                aspect_ratio="18/25"
+                cover=""
+                sizes=""
+                lazy=""
+                class="rounded-[1.25rem] w-4/5 ml-auto"
+            }}
+            {{ partial src="statamic-peak-tools::components/picture"
+                :image="small_image"
+                aspect_ratio="18/25"
+                cover=""
+                sizes=""
+                lazy=""
+                class="rounded-[1.25rem] w-3/5 -mt-36"
+            }}
+        </div>
+        <p class="col-span-2 sm:col-span-12 lg:col-span-5 text-h3 mt-36 lg:mt-16">{{ footer_text }}</p>
+    </div>
+</section>

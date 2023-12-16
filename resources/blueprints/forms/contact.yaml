@@ -1,0 +1,78 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              display: Name
+              type: text
+              validate: required
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              placeholder: 'First and Last'
+              antlers: false
+              hide_display: false
+          -
+            handle: company
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Company
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              placeholder: Hooli
+          -
+            handle: phone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: Phone
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              placeholder: '+65 1234-5678'
+          -
+            handle: email
+            field:
+              display: 'Email address'
+              type: text
+              validate: required|email
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              placeholder: name@example.com
+              antlers: false
+              hide_display: false
+          -
+            handle: message_body
+            field:
+              display: Message
+              type: textarea
+              validate: required
+              localizable: true
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              placeholder: 'Tell us about your story and needs'
+              antlers: false
+              hide_display: false

@@ -1,0 +1,19 @@
+{{#
+    @name Footer
+    @desc The sites footer rendered on each page.
+#}}
+
+<!-- /layout/_footer.antlers.html -->
+<footer class="bg-green-off pt-12 pb-24 lg:pb-12">
+    <div class="fluid-container">
+        {{ svg:logo class="h-[2.1875rem] fill-white" sanitize="true" }}
+        <div class="border-t border-white my-5"></div>
+        <p class="lg:w-5/12 max-w-md text-body text-white">{{ content.text }}</p>
+        <div class="mt-8">
+            {{ content:links }}
+                {{ partial:components/link button_type="white" as="button" link_type='contact_form' }}
+            {{ /content:links }}
+        </div>
+    </div>
+</footer>
+<!-- End: /layout/_footer.antlers.html -->

@@ -1,0 +1,10 @@
+title: Content
+data:
+  links:
+    -
+      id: lp8sfc33
+      label: 'Get in touch'
+      link_type: contact_form
+      target_blank: false
+      type: link
+      enabled: true

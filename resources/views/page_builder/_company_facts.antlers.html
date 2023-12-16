@@ -1,0 +1,26 @@
+<section class="">
+    {{ sections }}
+        <article class="
+            relative text-white lg:sticky lg:top-[5.375rem] lg:left-0 lg:h-[calc(100vh-5.375rem)] lg:max-h-[800px]
+            after:absolute after:inset-0 after:bg-black after:opacity-25
+        ">
+            {{ partial src="statamic-peak-tools::components/picture"
+                :image="background_image"
+                aspect_ratio=""
+                cover="true"
+                sizes=""
+                lazy=""
+                class="absolute top-0 left-0 w-full h-full"
+            }}
+            <div class="fluid-container grid-default relative z-10 py-11 aspect-[1.5] lg:h-full">
+                <div class="col-span-2 sm:col-span-12 lg:col-span-6">
+                    <div class="text-number">0{{ index + 1 }}.</div>
+                </div>
+                <div class="col-span-2 sm:col-span-12 lg:col-span-6 mt-60 lg:mt-0 lg:flex lg:flex-col lg:justify-start">
+                    <h2 class="text-h2 lg:text-h3">{{ heading }}</h2>
+                    <p class="text-body mt-4 lg:pr-24">{{ body }}</p>
+                </div>
+            </div>
+        </article>
+    {{ /sections }}
+</section>

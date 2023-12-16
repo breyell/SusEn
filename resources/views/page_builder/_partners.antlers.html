@@ -1,0 +1,41 @@
+<section class="py-16 overflow-hidden">
+    <div class="fluid-container">
+        <div class="grid-default">
+            <h2 class="text-h2 col-span-12 lg:col-span-10">{{ heading }}</h2>
+            <div class="col-span-12 h-14 mt-16">
+                <div class="relative inline-block">
+                    {{ loop times="3" from="0" }}
+                        <ul
+                            class="flex
+                                {{ switch(
+                                    (value == 0) => 'animate-marquee-0',
+                                    (value == 1) => 'animate-marquee-1 absolute top-0 left-0',
+                                    (value == 2) => 'animate-marquee-2 absolute top-0 left-0',
+                                    (value == 3) => 'animate-marquee-3 absolute top-0 left-0',
+                                )}}
+                            "
+                            {{ if !first }}
+                                aria-hidden="true"
+                            {{ /if }}
+                        >
+                            {{ logos }}
+                                <li class="flex items-center px-6">
+                                    <div class="h-14">
+                                        {{ partial src="statamic-peak-tools::components/picture"
+                                            :image="url"
+                                            aspect_ratio=""
+                                            cover=""
+                                            sizes=""
+                                            lazy="false"
+                                            class="brightness-0 h-full w-auto max-w-none"
+                                        }}
+                                    </div>
+                                </li>
+                            {{ /logos }}
+                        </ul>
+                    {{ /loop }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,53 @@
+<section class="">
+    {{ services }}
+        <article class="
+            lg:sticky lg:top-[5.375rem] lg:left-0 lg:h-[calc(100vh-5.375rem)] lg:max-h-[800px] rounded-[1.25rem] py-16 lg:py-7
+            {{ switch(
+                (index == 0) => 'bg-blue-light after:bg-blue-light',
+                (index == 1) => 'bg-beige after:bg-beige',
+                (index == 2) => 'bg-orange-mellow after:bg-orange-mellow',
+            ) }}
+        ">
+            <div class="relative lg:h-full">
+                <div class="fluid-container lg:h-full grid gap-x-8 grid-cols-1 lg:grid-cols-2">
+                    <div class="
+                        hidden lg:block relative w-full mt-9 lg:mt-0 lg:h-full lg:row-start-1
+                        {{ switch between='lg:col-start-2|lg:col-start-1' for="image" }}"
+                    >
+                        {{ partial src="statamic-peak-tools::components/picture"
+                            :image="image"
+                            aspect_ratio=""
+                            cover=""
+                            sizes=""
+                            lazy=""
+                            class="rounded-[1.25rem] absolute top-0 right-0 w-full h-full object-cover"
+                        }}
+                    </div>
+                    <div class="lg:mt-12 lg:row-start-1 {{ switch between='lg:col-start-1|lg:col-start-2' for="text" }}">
+                        <h2 class="text-h1">{{ heading }}</h2>
+                        <div class="lg:hidden mt-9">
+                            {{ partial src="statamic-peak-tools::components/picture"
+                                :image="image"
+                                aspect_ratio="1"
+                                cover="true"
+                                sizes=""
+                                lazy=""
+                                class="rounded-[1.25rem]"
+                            }}
+                        </div>
+                        <p class="mt-6 text-body">{{ body }}</p>
+                        {{ if link }}
+                            <a href="{{ link }}" class="
+                                relative block w-12 h-12 p-3 mt-10
+                                after:absolute after:top-0 after:left-0 after:w-full after:h-full after:border after:border-black after:rounded-[0.625rem] after:transition-[border-width] after:duration-75
+                                hover:after:border-2
+                            ">
+                                {{ svg:arrow class="text-black" aria-hidden="true" sanitize="true" }}
+                            </a>
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        </article>
+    {{ /services }}
+</section>

@@ -1,0 +1,50 @@
+<section class="
+    relative -mt-5 pt-16 rounded-3xl overflow-hidden lg:overflow-visible
+    {{ switch(
+        (background_image_location == 1) => 'pb-48',
+        (background_image_location == 2) => 'pb-24',
+    ) }}
+    {{ switch(
+        (background_color == 'yellow') => 'bg-yellow',
+    ) }}
+">
+    {{ if background_image_location == 1 }}
+        {{ svg:circleish
+            class="
+                text-white opacity-40
+                absolute bottom-0 right-0 md:bottom-auto
+                w-[45.5rem] sm:w-[40rem] lg:w-[50rem]
+                translate-x-1/2 lg:translate-x-0 lg:-translate-y-40
+            "
+            sanitize="true"
+        }}
+    {{ /if }}
+    {{ if background_image_location == 2 }}
+        {{ svg:circleish
+            class="
+                text-[#FEEBA8] opacity-40
+                absolute top-0 right-0 lg:top-[-10%]
+                translate-x-1/2 md:translate-x-0
+                w-[45.5rem] md:w-[35rem] lg:w-auto lg:h-[120%] max-h-full lg:max-h-none
+            "
+            sanitize="true"
+        }}
+    {{ /if }}
+    <div class="fluid-container relative">
+        <div class="grid-default gap-y-8">
+            <h2 class="
+                {{ switch(
+                    (heading_size == 'h1') => 'col-span-2 sm:col-span-12 text-h1',
+                    (heading_size == 'h2') => 'col-span-2 sm:col-span-12 lg:col-span-8 text-h2',
+                ) }}
+            ">{{ heading | nl2br }}</h2>
+            <p class="col-span-2 sm:col-span-12 lg:col-span-10 text-h3">{{ large_text | nl2br }}</p>
+            <p class="col-span-2 sm:col-span-12 lg:col-span-5 lg:col-start-7 text-body lg:mt-16">{{ small_text | nl2br }}</p>
+            <div class="col-span-2 sm:col-span-12 lg:col-span-6 lg:col-start-7 lg:mt-4">
+                {{ links }}
+                    {{ partial:components/link button_type="black" }}
+                {{ /links }}
+            </div>
+        </div>
+    </div>
+</section>

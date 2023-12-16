@@ -1,0 +1,46 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Footer
+        fields:
+          -
+            handle: text
+            field:
+              antlers: false
+              type: textarea
+              display: Text
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: links
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    link:
+                      display: Link
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          import: link
+              type: replicator
+              display: Links
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

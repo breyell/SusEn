@@ -1,0 +1,119 @@
+title: 'Split Text'
+fields:
+  -
+    handle: background_color
+    field:
+      options:
+        yellow: Yellow
+        white: White
+      inline: false
+      cast_booleans: false
+      type: radio
+      display: 'Background Color'
+      icon: radio
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: heading_size
+    field:
+      options:
+        h1: H1
+        h2: H2
+      inline: false
+      cast_booleans: false
+      type: radio
+      display: 'Heading Size'
+      icon: radio
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: background_image_location
+    field:
+      options:
+        1: '1'
+        2: '2'
+        None: 'false'
+      inline: false
+      cast_booleans: false
+      type: radio
+      display: 'Background Image Location'
+      icon: radio
+      width: 33
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: large_text
+    field:
+      antlers: false
+      type: textarea
+      display: 'Large Text'
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: small_text
+    field:
+      antlers: false
+      type: textarea
+      display: 'Small Text'
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: links
+    field:
+      collapse: false
+      previews: true
+      max_sets: 1
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            link:
+              display: Link
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: link
+      type: replicator
+      display: Links
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

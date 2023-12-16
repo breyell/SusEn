@@ -1,0 +1,45 @@
+{{#
+	@name Link attributes
+	@desc A single link component. Faux is used when a link is displayed inside a link (for example in link blocks).
+#}}
+
+<!-- /components/_link.antlers.html -->
+{{ if label }}
+    {{ if link_type == 'contact_form' }}
+        <button
+    {{ else }}
+        <{{ as or 'a' }}
+    {{ /if }}
+        {{ slot:attributes }}
+        class="
+            {{ class }}
+            {{ if button_type }}
+                relative inline-block min-w-[12.25rem] p-[14px] rounded-[10px] text-center text-button
+                after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+                {{ if button_type == 'black'}}
+                    text-black
+                {{ elseif button_type == 'white'}}
+                    text-white
+                {{ /if }}
+            {{ /if }}
+        "
+        {{ switch(
+            (link_type == 'entry') => 'href="{{ entry:url }}"',
+            (link_type == 'url') => 'href="{{ url }}"',
+            (link_type == 'email') => 'href="mailto:{{ email | obfuscate_email }}"',
+            (link_type == 'tel') => 'href="tel:{{ tel }}"',
+            (link_type == 'sms') => 'href="sms:{{ sms }}"',
+            (link_type == 'asset') => 'href="{{ asset }}" download',
+            (link_type == 'contact_form') => '@click="contactOpen = !contactOpen"',
+            () => void
+        )}}
+        {{ target_blank ?= 'rel="noopener" target="_blank"' }}
+    >
+        {{ link_type == 'email' ? { label | obfuscate_email } : label }}
+    {{ if link_type == 'contact_form' }}
+        </button
+    {{ else }}
+        </{{ as or 'a' }}
+    {{ /if }}
+{{ /if }}
+<!-- End: /components/_link.antlers.html -->
