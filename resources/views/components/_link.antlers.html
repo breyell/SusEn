@@ -14,8 +14,7 @@
         class="
             {{ class }}
             {{ if button_type }}
-                relative inline-block min-w-[12.25rem] p-[14px] rounded-[10px] text-center text-button
-                after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+                relative inline-block min-w-[12.25rem] p-[14px] border border-current rounded-full text-center text-button
                 {{ if button_type == 'black'}}
                     text-black
                 {{ elseif button_type == 'white'}}

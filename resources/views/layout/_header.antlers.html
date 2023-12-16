@@ -25,30 +25,29 @@
                 {{ svg:logo class="h-[1.3125rem] lg:h-[1.875rem] fill-current" sanitize="true" }}
             </a>
             <div class="flex gap-x-7 items-center">
-                <nav class="hidden lg:block" aria-label="{{ trans:strings.main_navigation }}">
-                    <ul class="flex items-center space-x-8">
-                        {{ nav:main max_depth="2" include_home="true" select="title|url" }}
-                            <li class="relative leading-none">
-                                <a class="
-                                        p-1 -m-1 flex items-center font-bold text-sm text-button focus:outline-none focus-visible:ring-2 ring-primary underline-offset-4 transition-all decoration-2
-                                        {{ is_current || is_parent
-                                            ? 'underline hover:decoration-4'
-                                            : 'hover:underline'
-                                        }}
-                                    "
-                                    href="{{ url }}"
-                                >{{ title }}</a>
-                            </li>
-                        {{ /nav:main }}
-                    </ul>
-                </nav>
+                    {{# <nav class="hidden lg:block" aria-label="{{ trans:strings.main_navigation }}">
+                        <ul class="flex items-center space-x-8">
+                            {{ nav:main max_depth="2" include_home="false" select="title|url" }}
+                                <li class="relative leading-none">
+                                    <a class="
+                                            p-1 -m-1 flex items-center font-bold text-sm text-button focus:outline-none focus-visible:ring-2 ring-primary underline-offset-4 transition-all decoration-2
+                                            {{ is_current || is_parent
+                                                ? 'underline hover:decoration-4'
+                                                : 'hover:underline'
+                                            }}
+                                        "
+                                        href="{{ url }}"
+                                    >{{ title }}</a>
+                                </li>
+                            {{ /nav:main }}
+                        </ul>
+                    </nav> #}}
                 <button
                     @click="contactOpen = !contactOpen"
                     :aria-expanded="contactOpen"
                     aria-controls="contact"
                     class="
-                        hidden lg:inline-block relative min-w-[12.25rem] py-3 rounded-[10px] text-center text-button
-                        after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+                        hidden lg:inline-block relative min-w-[12.25rem] py-3 rounded-full border border-current text-center text-button
                     "
                 >Get in touch</button>
                 <button
@@ -91,7 +90,7 @@
                 after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
             "
         >Get in touch</button>
-        <nav class="py-9 mt-16 border-b border-t border-white" aria-label="{{ trans:strings.main_navigation }}">
+        {{# <nav class="py-9 mt-16 border-b border-t border-white" aria-label="{{ trans:strings.main_navigation }}">
             <ul class="flex items-center space-x-8">
                 {{ nav:main max_depth="2" include_home="true" select="title|url" }}
                     <li class="relative leading-none w-full">
@@ -116,7 +115,7 @@
                     </li>
                 {{ /nav:main }}
             </ul>
-        </nav>
+        </nav> #}}
     </div>
     <div
         id="contact"
