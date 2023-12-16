@@ -18,7 +18,7 @@ Dump your .env values here with sensitive data removed.
 
 ```env
 Dump your .env values here with sensitive data removed. The following is a production example that uses full static caching:
-APP_NAME="Fluxia"
+APP_NAME="SusEn"
 APP_ENV=production
 APP_KEY="base64:jUqPoWvejl3QM8pfKWQ8fdutxdjf4CPZQrS+ERpLeTw="
 APP_DEBUG=false
@@ -74,12 +74,14 @@ STATAMIC_CUSTOM_LOGO_OUTSIDE_URL="/visuals/client-logo.svg"
 
 ## NGINX config
 
-Add the following to your NGINX config __inside the server block__ enable static resource caching:
+Add the following to your NGINX config **inside the server block** enable static resource caching:
+
 ```
 expires $expires;
 ```
 
-And this __outside the server block__:
+And this **outside the server block**:
+
 ```
 map $sent_http_content_type $expires {
     default    off;

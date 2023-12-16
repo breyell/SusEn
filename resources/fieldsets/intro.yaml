@@ -4,7 +4,7 @@ fields:
     handle: background_color
     field:
       options:
-        yellow: Yellow
+        blue: Blue
         white: White
       inline: false
       cast_booleans: false

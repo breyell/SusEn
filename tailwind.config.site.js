@@ -23,24 +23,12 @@ module.exports = {
                 DEFAULT: "cubic-bezier(0.4, 0, 0.2, 1)",
             },
             colors: {
-                black: "#000",
-                white: {
-                    DEFAULT: "#FFF",
-                    off: "#F5F5ED",
-                },
-                green: {
-                    off: "#076761",
-                },
-                beige: "#EFE9DE",
-                orange: {
-                    mellow: "#F29E37",
-                },
-                yellow: {
-                    DEFAULT: "#FFDC61",
-                },
-                blue: {
-                    light: "#C4DBE0",
-                },
+                black: "#21211F",
+                white: "#FFF",
+                blue: "#2B66FF",
+                "blue-light": "#9FE0F7",
+                cream: "#FFF6EA",
+                "green-light": "#DEFFBC",
             },
             animation: {
                 "marquee-0": "marquee0 25s linear infinite",
@@ -69,8 +57,8 @@ module.exports = {
         },
         // Remove the font families you don't want to use.
         fontFamily: {
-            slussen: ["Slussen", ...defaultTheme.fontFamily.serif],
-            "slussen-mono": ["Slussen Mono", ...defaultTheme.fontFamily.serif],
+            "ibm-plex-sans": ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
+            "ibm-plex-mono": ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
         },
         // The font weights available for this site.
         fontWeight: {
@@ -79,7 +67,7 @@ module.exports = {
             light: 300,
             normal: 400,
             medium: 500,
-            // semibold: 600,
+            semibold: 600,
             bold: 700,
             // extrabold: 800,
             // black: 900,

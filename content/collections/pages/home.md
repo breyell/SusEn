@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: ff494186-c19d-4eec-ade5-edf9718c1f98
-updated_at: 1702708448
+updated_at: 1702768702
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -27,22 +27,13 @@ page_builder:
     video: 'https://vimeo.com/892793287?share=copy'
   -
     id: lp2a7ol0
-    heading: 'Science + Technology'
-    large_text: 'At Fluxia, we build and launch new products that change the world. Go ahead. Be ambitious.'
-    small_text: 'Driven by data, empowered by experience, and fueled by collaboration we usher new ideas into existence. We are building the technology of the future, let’s build it together.'
-    links:
-      -
-        id: lp2a7qig
-        label: 'Learn More'
-        link_type: url
-        target_blank: false
-        type: link
-        enabled: true
-        url: 'https://google.com'
+    heading: 'Big questions. Bigger impact.'
+    large_text: 'Empowered by nature and guided by technology, we give businesses the blueprint for sustainable energy solutions.'
+    small_text: 'SusEn is a Singapore-headquartered sustainable energy management company designed to change the way we power, store, and manage energy. Utilising its power electronics technology, which includes proprietary hardware and software, it offers clients the value proposition of sustainable energy solutions at domestic and SME business scale.'
     type: intro
     enabled: true
-    background_color: yellow
-    heading_size: h1
+    background_color: blue
+    heading_size: h2
     background_image_location: '1'
   -
     id: lp2a7t0p
@@ -58,41 +49,27 @@ page_builder:
     services:
       -
         id: lp3i7oel
-        heading: Design
-        body: 'From concept to final implementation, we deliver complex programs and products efficiently and affordably with collaborative milestones at every step.'
-        type: service
-        enabled: true
-        image: zhangzui-pf23y30hd68-unsplash.jpg
-      -
-        id: lp8nftf0
-        heading: Build
-        body: 'Fluxia leverages it network of manufacturing partners together with in-house hardware, firmware and software developers to take ideas from first article through to mass production.'
+        heading: 'Our Design'
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         type: service
         enabled: true
         image: zhangzui-pf23y30hd68-unsplash.jpg
       -
         id: lp8nfroy
-        heading: Consult
-        body: 'We work alongside clients to understand their businesses and the challenges they face so that we can deliver bold new solutions in systems, product and technology.'
+        heading: 'Our Business Model'
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         type: service
         enabled: true
         image: zhangzui-pf23y30hd68-unsplash.jpg
+    background_image: texture.jpg
   -
     id: lp8rfry7
     background_color: white
     heading_size: h2
-    heading: 'From first spark to first to market, good ideas deserve to thrive.'
-    small_text: 'To bring big ideas to life, you need expert partners who can turn a concept into reality. We bring science and technology together to create solutions to pressing business challenges. Through collaboration, communication and a meticulous commitment to finding the right answer, we’re a partner and a catalyst for lasting impact.'
-    links:
-      -
-        id: lp8rgc70
-        label: 'Learn More'
-        link_type: url
-        target_blank: false
-        type: link
-        enabled: true
-        url: 'https://google.com'
+    heading: 'Working smarter for your business, working harder  for our planet.'
+    small_text: 'SusEn is a Singapore-headquartered sustainable energy management company designed to change the way we power, store, and manage energy. Utilising its power electronics technology, which includes proprietary hardware and software, it offers clients the value proposition of sustainable energy solutions at domestic and SME business scale.'
     type: intro
     enabled: true
     background_image_location: '2'
+    large_text: 'Singapore, UK, Australia, USA & SEA'
 ---

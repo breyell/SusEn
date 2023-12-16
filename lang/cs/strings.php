@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'S přátelským pozdravem',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Vážený',
-    'form_mail_logo' => 'https://fluxia.com/visuals/fluxia.svg',
+    'form_mail_logo' => 'https://sus-en.com/visuals/susen.svg',
     'form_mail_submitted' => 'Odesláno',
     'form_mail_title' => 'Kontaktní formulář',
     'form_mail_url' => config('app.url'),

@@ -55,7 +55,7 @@
                                 <label class="flex text-subtext" for="{{ handle }}">
                                     {{ trans :key="field:display" }}
                                     {{ if validate | contains('required') }}
-                                        <span class="text-red-700">*</span>
+                                        <span class="text-blue-light">*</span>
                                     {{ /if }}
 
                                     {{ if field:instructions && instructions_position === 'above' }}
@@ -92,9 +92,7 @@
                     {{# :disabled="form.processing" #}}
                     {{# :class="{ 'opacity-25 cursor-default': form.processing }" #}}
                     class="
-                        inline-block relative min-w-[12.25rem] py-[14px] rounded-[10px] text-center text-button cursor-pointer
-                        after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px]
-                        after:transition-[border-width] after:duration-75 hover:after:border-2
+                        inline-block relative min-w-[12.25rem] py-[14px] border border-white rounded-full text-center text-button cursor-pointer
                     "
                 >{{ trans:strings.form_send }}</button>
             </div>

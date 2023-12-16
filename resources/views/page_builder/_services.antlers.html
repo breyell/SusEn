@@ -2,17 +2,21 @@
     {{ services }}
         <article class="
             lg:sticky lg:top-[5.375rem] lg:left-0 lg:h-[calc(100vh-5.375rem)] lg:max-h-[800px] py-16 lg:py-7
-            {{ switch(
-                (index == 0) => 'bg-blue-light after:bg-blue-light',
-                (index == 1) => 'bg-beige after:bg-beige',
-                (index == 2) => 'bg-orange-mellow after:bg-orange-mellow',
-            ) }}
+            {{ switch between="bg-blue-light|bg-cream" for="image-bg" }}
         ">
             <div class="relative lg:h-full">
+                {{# {{ partial src="statamic-peak-tools::components/picture"
+                    :image="background_image"
+                    aspect_ratio=""
+                    cover=""
+                    sizes=""
+                    lazy=""
+                    class="w-1/2 h-full border border-black absolute top-0 right-0 object-cover"
+                }} #}}
                 <div class="fluid-container lg:h-full grid gap-x-8 grid-cols-1 lg:grid-cols-2">
                     <div class="
                         hidden lg:block relative w-full mt-9 lg:mt-0 lg:h-full lg:row-start-1
-                        {{ switch between='lg:col-start-2|lg:col-start-1' for="image" }}"
+                        {{ switch between='lg:col-start-2 lg:my-12|lg:col-start-1' for="image" }}"
                     >
                         {{ partial src="statamic-peak-tools::components/picture"
                             :image="image"
@@ -20,7 +24,7 @@
                             cover=""
                             sizes=""
                             lazy=""
-                            class="rounded-[1.25rem] absolute top-0 right-0 w-full h-full object-cover"
+                            class="rounded-[1.625rem] border border-black absolute z-10 top-0 right-0 w-full h-full object-cover"
                         }}
                     </div>
                     <div class="lg:mt-12 lg:row-start-1 {{ switch between='lg:col-start-1|lg:col-start-2' for="text" }}">
@@ -32,10 +36,10 @@
                                 cover="true"
                                 sizes=""
                                 lazy=""
-                                class="rounded-[1.25rem]"
+                                class="rounded-[1.625rem] border border-black"
                             }}
                         </div>
-                        <p class="mt-6 text-body">{{ body }}</p>
+                        <p class="mt-6 text-body lg:w-5/6">{{ body }}</p>
                         {{ if link }}
                             <a href="{{ link }}" class="
                                 relative block w-12 h-12 p-3 mt-10

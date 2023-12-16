@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'Vriendelijke groeten',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Beste',
-    'form_mail_logo' => 'https://fluxia.com/visuals/fluxia.svg',
+    'form_mail_logo' => 'https://sus-en.com/visuals/susen.svg',
     'form_mail_submitted' => 'Verzonden',
     'form_mail_title' => 'Contactformulier',
     'form_mail_url' => config('app.url'),

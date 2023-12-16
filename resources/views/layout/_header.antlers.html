@@ -18,7 +18,7 @@
             'text-white': atTop,
             'bg-white/[0.85]': !atTop,
         }"
-        class="fixed z-30 top-0 left-0 w-full py-6 rounded-b-[0.625rem] transition-all"
+        class="fixed z-30 top-0 left-0 w-full py-6 transition-all"
     >
         <div class="fluid-container flex justify-between">
             <a href="/" class="inline-flex items-center">
@@ -120,14 +120,14 @@
     <div
         id="contact"
         :class="{ '!translate-x-0' : contactOpen }"
-        class="fixed lg:w-full lg:max-w-xl z-40 inset-0 w-full ml-auto py-7 px-9 bg-black text-white overflow-y-auto transition-all translate-x-full"
+        class="fixed lg:w-full lg:max-w-xl z-40 inset-0 w-full ml-auto py-7 px-9 bg-blue text-white overflow-y-auto transition-all translate-x-full"
     >
         <button @click="contactOpen = false" class="relative block w-8 h-8 ml-auto text-white">
             <div class="absolute z-10 top-0 left-0 w-full h-[2px] bg-current rotate-45 translate-y-[15px]"></div>
             <div class="absolute z-10 bottom-0 left-0 w-full h-[2px] bg-current -rotate-45 -translate-y-[15px]"></div>
             <div class="sr-only">Close Contact</div>
         </button>
-        <h3 class="text-h3 mt-2">Get in touch</h3>
+        <h3 class="text-h2 mt-2">Get in touch</h3>
         <p class="text-body mt-2.5">Fill out the form below to start the conversation with us, or shoot us an email.</p>
         {{ partial:layout/header_form }}
     </div>

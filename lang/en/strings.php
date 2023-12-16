@@ -9,7 +9,7 @@ return [
     'form_mail_closing' => 'Kind regards',
     'form_mail_from' => config('app.name'),
     'form_mail_greeting' => 'Dear',
-    'form_mail_logo' => 'https://fluxia.com/visuals/fluxia.svg',
+    'form_mail_logo' => 'https://sus-en.com/visuals/susen.svg',
     'form_mail_submitted' => 'Submitted',
     'form_mail_title' => 'Contact form',
     'form_mail_url' => config('app.url'),
