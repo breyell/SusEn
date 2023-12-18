@@ -21,6 +21,14 @@
         font-display: swap;
         font-family: 'IBM Plex Sans';
         font-style: normal;
+        font-weight: 300;
+        src: url('/public/fonts/ibm-plex-sans/ibm-plex-sans-v19-latin-300.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
         font-weight: 400;
         src: url('/public/fonts/ibm-plex-sans/ibm-plex-sans-v19-latin-regular.woff2') format('woff2');
     }
@@ -52,7 +60,7 @@
     }
 
     .text-h1 {
-        @apply font-ibm-plex-mono font-light text-[3.125rem] leading-[1.1] tracking-[-0.0625rem] lg:text-[5.625rem] lg:leading-[5.9375rem] lg:tracking-[-0.1125rem] uppercase;
+        @apply font-ibm-plex-sans font-light text-[3.125rem] leading-[1.1] tracking-[-0.0625rem] lg:text-[5.625rem] lg:leading-[5.9375rem] lg:tracking-[-0.1125rem] uppercase;
     }
 
     .text-h2 {
