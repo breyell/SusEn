@@ -14,11 +14,11 @@
         class="
             {{ class }}
             {{ if button_type }}
-                relative inline-block min-w-[12.25rem] p-[14px] border border-current rounded-full text-center text-button
+                relative inline-block min-w-[12.25rem] p-[14px] border border-current rounded-full text-center text-button transition-colors
                 {{ if button_type == 'black'}}
-                    text-black
+                    text-black hover:bg-black hover:text-white
                 {{ elseif button_type == 'white'}}
-                    text-white
+                    text-white hover:bg-white hover:text-black
                 {{ /if }}
             {{ /if }}
         "

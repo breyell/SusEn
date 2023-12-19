@@ -47,7 +47,7 @@
                     :aria-expanded="contactOpen"
                     aria-controls="contact"
                     class="
-                        hidden lg:inline-block relative min-w-[12.25rem] py-3 rounded-full border border-current text-center text-button
+                        hidden lg:inline-block relative min-w-[12.25rem] py-3 rounded-full border border-current text-center text-button hover:bg-white hover:text-black transition-colors
                     "
                 >Get in touch</button>
                 <button
@@ -86,8 +86,7 @@
             :aria-expanded="contactOpen"
             aria-controls="contact"
             class="
-                inline-block relative min-w-[12.25rem] py-[14px] rounded-[10px] text-center text-button
-                after:absolute after:inset-[-1px] after:border after:border-current after:rounded-[10px] after:transition-[border-width] after:duration-75 hover:after:border-2
+                inline-block relative min-w-[12.25rem] py-[14px] rounded-full border-white border text-white text-center text-button hover:bg-white hover:text-black transition-colors
             "
         >Get in touch</button>
         {{# <nav class="py-9 mt-16 border-b border-t border-white" aria-label="{{ trans:strings.main_navigation }}">
