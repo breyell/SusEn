@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: ff494186-c19d-4eec-ade5-edf9718c1f98
-updated_at: 1702945822
+updated_at: 1702945854
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -12,7 +12,7 @@ sitemap_priority: 0.5
 page_builder:
   -
     id: lp0sotnp
-    heading: 'Build the technology of the future.'
+    heading: 'Energy Efficiently'
     type: home_hero
     enabled: true
     links:
