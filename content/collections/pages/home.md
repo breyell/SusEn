@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: ff494186-c19d-4eec-ade5-edf9718c1f98
-updated_at: 1703005704
+updated_at: 1703006068
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -47,7 +47,7 @@ page_builder:
     services:
       -
         id: lp3i7oel
-        heading: 'Our Design'
+        heading: 'DESIGN: Empowered by nature. Guided by technology.'
         body: 'By reengineering solar panels and energy storage solutions, we create something that makes your energy generation and storage more efficient — saving you more, for less.'
         type: service
         enabled: true
