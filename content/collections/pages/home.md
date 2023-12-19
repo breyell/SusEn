@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: ff494186-c19d-4eec-ade5-edf9718c1f98
-updated_at: 1702768702
+updated_at: 1702945854
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -12,19 +12,18 @@ sitemap_priority: 0.5
 page_builder:
   -
     id: lp0sotnp
-    heading: 'Build the technology of the future.'
+    heading: 'Energy Efficiently'
     type: home_hero
     enabled: true
     links:
       -
         id: lp0sufbh
-        label: 'Learn More'
-        link_type: url
+        label: 'Get Started'
+        link_type: contact_form
         target_blank: false
         type: link
         enabled: true
-        url: 'https://google.com'
-    video: 'https://vimeo.com/892793287?share=copy'
+    video: 'https://vimeo.com/896017112?share=copy'
   -
     id: lp2a7ol0
     heading: 'Big questions. Bigger impact.'
