@@ -3,7 +3,7 @@ id: home
 blueprint: page
 title: Home
 updated_by: ff494186-c19d-4eec-ade5-edf9718c1f98
-updated_at: 1703006068
+updated_at: 1703006135
 seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
@@ -47,14 +47,14 @@ page_builder:
     services:
       -
         id: lp3i7oel
-        heading: 'DESIGN: Empowered by nature. Guided by technology.'
+        heading: 'Guided by technology'
         body: 'By reengineering solar panels and energy storage solutions, we create something that makes your energy generation and storage more efficient — saving you more, for less.'
         type: service
         enabled: true
         image: anders-j-hxucl0nusiy-unsplash.jpg
       -
         id: lp8nfroy
-        heading: 'Our Business Model'
+        heading: 'Empowered by nature'
         body: 'We give businesses and homeowners the option to reduce their reliance on the public grid by providing energy at a sustainable and cheaper pricing through Ai algorithm and technology.'
         type: service
         enabled: true
